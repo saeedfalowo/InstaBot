@@ -1,0 +1,3 @@
+phrases_filename,C:/Users/User/Documents/GitHub/Bot/InstaBot/1-FRASES TXT - CDEXDITAL DO TESTE.txt
+userprofile_filename,C:/Users/User/Documents/GitHub/Bot/InstaBot/test_user_profiles.txt
+posts_filename,C:/Users/User/Documents/GitHub/Bot/InstaBot/ig_posts.txt

@@ -1,14 +1,24 @@
-class GetData():
-	f = open("filepaths.txt","r")
-	filepaths = f.read()
-	filepaths_list = filepaths.split("\n")
+"""
+This file extracts the contents of the filepaths text file
+It then takes the file paths of all the required text files for the Bot
+and extract the data within them into list data types
+"""
 
+class GetData():
+	# Open the filepaths.txt to be read from
+	f = open("filepaths.txt","r")
+	filepaths = f.read() # read the contents of the file
+	filepaths_list = filepaths.split("\n") # split contents by return character to get the individual text file fullpaths
+
+	# Extract the phrases text file contents
 	phrases_filename_split = filepaths_list[0].split(",")
 	phrases_filename = phrases_filename_split[1]
 
+	# Extract the user profile text file contents
 	userprof_filename_split = filepaths_list[1].split(",")
 	userprof_filename = userprof_filename_split[1]
 
+	# Extract the instagram post url text file contents
 	posts_filename_split = filepaths_list[2].split(",")
 	posts_filename = posts_filename_split[1]
 
@@ -17,6 +27,7 @@ class GetData():
 				print("ig_posts file path: ", posts_filename)"""
 
 	def GetListData(self):
+		# Run the functions to extract the txt file contents into a list variables
 		phrase_list 	= self.ExtractPhrases()
 		user_login_list = self.ExtractUsersCreds()
 		ig_posts_list 	= self.ExtractIgPosts()

@@ -6,17 +6,21 @@ import csv
 class FileImportGUI():
 	file_paths = []
 	def __init__(self):
+		# Set up the GUI window
 		self.window = tk.Tk()
 		self.window.columnconfigure([0,1], minsize=150)
 		self.window.rowconfigure([0,1,2,3,4,5,6], minsize=50)
 		self.window.title("Import Files")
 		
+		# Define the first instruction label
 		instuction_label1 = tk.Label(master=self.window, width=100, relief="raised", justify="center")
 		instuction_label1.grid(row=0, column=0, padx=10, sticky="e")
 		instuction_label1.configure(text="Select the Phrases text file")
 
+		# Define the filepath label field
 		self.phrases_filepath_label = tk.Label(master=self.window, width=100, relief="ridge", justify="left")
 		self.phrases_filepath_label.grid(row=1, column=0, padx=10, sticky="e")
+		# Define the browse button
 		self.phrases_filepath_btn = tk.Button(master=self.window, text="Browse", command=self.getPhraseFilePath)		
 		self.phrases_filepath_btn.grid(row=1, column=1, pady=10)
 		
@@ -38,13 +42,15 @@ class FileImportGUI():
 		self.posts_filepath_btn = tk.Button(master=self.window, text="Browse", command=self.getPostsFilePath)
 		self.posts_filepath_btn.grid(row=5, column=1, pady=10)
 
+		# Define the submit button
 		self.submit_btn = tk.Button(master=self.window, text="Submit", command=self.submit)
 		self.submit_btn.grid(row=6, column=0, pady=10)
 
-
+		# Run the GUI in a loop
 		self.window.mainloop()
 
 	def getPhraseFilePath(self):
+		# define the browse button on-click command function
 		phrases_filename = askopenfilename()
 		self.phrases_filepath_label.configure(text=phrases_filename)
 		self.file_paths.append(['phrases_filename,'+phrases_filename])

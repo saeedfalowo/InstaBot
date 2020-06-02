@@ -1,0 +1,1 @@
+"C:\Users\User\Anaconda3\envs\InstaBot\python.exe" "C:\Users\User\Documents\GitHub\Bot\InstaBot\app_data\file_import_gui.py"

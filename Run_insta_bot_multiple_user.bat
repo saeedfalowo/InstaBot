@@ -1,1 +1,0 @@
-"C:\Users\User\Anaconda3\envs\InstaBot\python.exe" "C:\Users\User\Documents\GitHub\Bot\InstaBot\insta_bot_multiple_user.py"

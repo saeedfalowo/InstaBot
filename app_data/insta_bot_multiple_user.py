@@ -69,7 +69,7 @@ class InstaBot:
 class RunInstaBot:
 	def __init__(self):
 		# Import the contents of the app data text files
-		import GetDat
+		import GetData
 		# Assign text file data to class variables
 		phrase_list 	= GetData.phrase_list
 		user_login_list = GetData.user_login_list
@@ -163,7 +163,7 @@ class RunInstaBot:
 
 				# exit()
 				# Run InstaBot to login to the selected user profile and post the unique comment to the defined instagram post
-				InstaBot(user_login_splt[0], user_login_splt[1], comment, ig_posts_list[h])
+				# InstaBot(user_login_splt[0], user_login_splt[1], comment, ig_posts_list[h])
 
 				# Write user index to the user index text file
 				user_indx_file.writelines(spacer)
